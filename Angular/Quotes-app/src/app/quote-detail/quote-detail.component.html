@@ -1,5 +1,5 @@
 <ul *ngFor= "let quote of quotes">
-    <div *ngIf=" quote.id ==1; then highlight else empty">
+    <div *ngIf="quote.upVotes == highest && quote.upVotes>0; then highlight else empty">
 
     </div>
     <ng-template #highlight>
