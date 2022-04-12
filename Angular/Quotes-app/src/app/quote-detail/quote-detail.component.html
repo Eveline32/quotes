@@ -1,0 +1,12 @@
+<ul *ngFor= "let quote of quotes">
+    <div *ngIf=" quote.id ==1; then highlight else empty">
+
+    </div>
+    <ng-template #highlight>
+        <li appHighlight>{{ quote.name}} <span>{{quote.quote}}</span> <span>{{quote.author}}</span> <span>{{quote.datePosted}}</span> <span class="text-primary">{{quote.upVotes}}</span> <span class="text-warning">{{quote.downVotes}}</span></li>
+    </ng-template>
+    
+    <ng-template #empty>
+        <li >{{ quote.name}} <span>{{quote.quote}}</span> <span>{{quote.author}}</span> <span>{{quote.datePosted}}</span> <span class="text-primary">{{quote.upVotes}}</span> <span class="text-warning">{{quote.downVotes}}</span></li>
+    </ng-template>
+</ul>
