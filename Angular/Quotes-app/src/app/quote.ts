@@ -1,4 +1,5 @@
 export class Quote {
+    isDescriptionShown: boolean;
     id: number;
     name: string;
     quote: string;
@@ -15,6 +16,7 @@ export class Quote {
         this.datePosted = datePosted
         this.upVotes =upVotes
         this.downVotes = downVotes
+            this.isDescriptionShown = false;
 
     }
 }
